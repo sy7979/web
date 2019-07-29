@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>프로그래밍 교육</h1>
+    <a href="https://www.python.org/"> 
+        
+    </a>
+    <a href="#python"><img height="50px" src="http://pluspng.com/img-png/python-logo-png-newpythonlogo-png-1024.png" alt="" ></a>
+    <a href="#web"><img height="50px" width="50px" src="images/html.png" alt="" ></a>
+    <!-- 컴퓨터에 이미지 파일이 저장되어 있으면 폴더 경로를 src 안에 적어주면 된다. -->
+    <a href="intro.html">참고싸이트</a>
+    <!-- 인라인: 오른쪽으로 이어져서 나온다 -->
+    <!-- 아래로 엔터친것처럼 아래로 나오는것은 블락! -->
+    <!-- "#python", id="python": 어떤 문서를 참조할것인가를 나타내는 reference, (문서 내부에 있는 특정 위치로 이동)-->
+    <!-- "intro.html" :다른 문서까지 가르킬 수 있다 -->
+
+    </a>
+    <hr>
+    <h2 id="python"></h2><a href="https://docs.python.org/ko/3/tutorial/index.html" target="_blank">파이썬</a></h2>
+    <h3>Number type</h3>
+    <p>파이썬에서 숫자형은 아래와 같이 있다.</p>
+    <!-- h3 tag와 보이는 것은 같지만 서로의 의미(본문인지, 제목인지)는 다르기 때문에 이를 고려해서 tag를 달아준다 -->
+   
+    <ol>
+        <li>int</li>
+        <li>float</li>
+        <li>complex</li>
+        <li><del>str</del></li>
+        <!-- <del><li>str</li></del> -->
+        <!-- 이것도 똑같이 된다. -->
+    </ol>
+
+    <h3>Seuquence</h3>
+    <p>파이썬에서 시퀀스는 아래와 같이 있다.</p> <!--<p><b>시퀀스는 for문을 돌릴 수 있다!!!</b></p>-->
+    <!-- p tag가 끝나면 그 다음 내용은 무조건 다음 줄로 넘어가서 쓰인다. 옆에 이어써도 보이는건 줄바꿈되서 보인다 -->
+    <p><b>시퀀스는 for문을 돌릴 수 있다!!!</b></p>
+    
+    <ol>
+        <li>str</li>
+        <li>list</li>
+        <li>tuple</li>
+        <li>range</li>
+    </ol>
+    
+    <hr>
+    
+    <h2 id='web'></h2><a href="https://www.w3schools.com/tags/tag_a.asp">웹</a></h2>
+    <!--  target="_self"가 defalt이다 -->
+
+    <h3>기초</h3>
+    <ul>
+        <li style="list-style-type: circle">HTML</li>
+        <li style="list-style-type: circle">CSS</li>
+        <!-- w3school에서 tag reference를 검색해보며 여러가지 스타일을 사용할 수 있다 -->
+    </ul>  
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v0YEaeIClKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- iframe은 사용 지양합니다. 외부에서 쓴 코드여서 내부 코드와 충돌이 일어날 수 있음 -->
+
+
+    <table border="1">
+        <th></th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <tr>
+            <td>A코스</td>
+            <td rowspan="2"aling="center">짬뽕</td>
+            <td colspan="2"aling="center">초밥</td>
+            
+        </tr>
+        <tr>
+            <td>B코스</td>
+            <td>김치찌개</td>
+            <td>삼계탕</td>
+        </tr>
+    </table>
+
+
+    <table border="1">
+        <!-- table은 하나의 열을 기준으로 써내려간다. -->
+        <thead>
+            <th><!--table head(표제목들)--></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td rowspan="2">2</td>
+                <td colspan="2">3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead boder-right:none border-left:none border-top:none>
+            <th>TIME</th>
+            <th>INDOOR</th>
+            <th colspan="2"aling="center">OUTDOOR</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td style="border:2px solid red"></td>
+                <td style="border:2px solid red">소극장</td>
+                <td style="border:2px solid red">잔디마당</td>
+                <td style="border:2px solid red">대공연장</td>
+            </tr>
+            <tr>
+                <td style="border:2px solid red">10:00</td>
+                <td rowspan="2" style="border:2px solid red">안녕하신가영</td>
+                <td style="border:2px solid red"></td>
+                <td style="border:2px solid red">10cm</td>
+            </tr>
+            <tr>
+                <td style="border:2px solid red">13:00</td>
+                <td rowspan="2" style="border:2px solid red">선우정아</td>
+                <td rowspan="2" style="border:2px solid red">참깨와 솜사탕</td>
+            </tr>
+            <tr>
+                <td style="border:2px solid red">15:00</td>
+                <td style="border:2px solid red"></td>
+            </tr>
+            <tr>
+                <td style="border:2px solid red">17:00</td>
+                <td style="border:2px solid red">크러쉬</td>
+                <td style="border:2px solid red"></td>
+                <td style="border:2px solid red">폴킴</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+</html>
+
+
