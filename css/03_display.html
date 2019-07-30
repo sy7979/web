@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- font faily link form google font: search and copy the code -->
+    <link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="03_display.css">
+
+</head>
+<body>
+    <!-- block(ex. div...)은 항상 새로운 라인에서 시작된다. -->
+    <div>
+        <h1>div는 block입니다.</h1>
+    </div>
+    <div class="half" >
+        <h1>여기는 절반만!</h1>
+    </div>
+    <div class="half" >
+        <h1>여기는 절반만!</h1>
+    </div>
+    <!-- <h1>여기는 h1입니다.</h1> -->
+
+    <!-- inline을 사용하면 block도 옆으로 쓸 수 있습니다. -->
+    <div class="half i" >
+        <span>옆으로~~</span>
+    </div>
+    <div class="half i">
+        <span>붙자!!</span>
+    </div>
+
+    <!-- inline 요소(ex.span, input ...): 오른쪽으로 차곡차곡 붙는다. ==> block 을 사용하면 inline도 새로운 라인에서 시작할 수 있다. -->
+    <span>여기는 span</span>
+    <input type="text" class="b">
+    <input type="date">
+
+
+    <!-- inline-block: inline에 마진을 줄 수 있다.-->
+    <span class="bi">inline-block으로 마진을 줄 수 있다.</span>
+    <input type="text" class="ib">
+
+
+    <!-- visivility:hidden: 숨겨진다.(영역을 차지하고 있다.) display: none: 완전 사라진다(배치조차 안함) -->   
+    <!-- background image set-up -->
+    <h1 class="bg">안녕하세요</h1>
+    <!-- font-family set-up -->
+    <h1 class="text">hello, everybody! nice to meet you~</h1>
+
+</body>
+</html>

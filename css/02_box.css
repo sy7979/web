@@ -1,0 +1,45 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: lightsalmon;
+}
+
+.margin {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.padding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.border {
+    border-width: 2px;
+    border-color: rgb(104, 38, 16);
+    border-style: dotted
+}
+
+
+/* margin의 축약형 */
+/* 모든 방향 10 */
+.margin-1 {
+    margin: 10px;
+}
+/* 상하 10, 좌우 20 */
+.margin-2 {
+    margin: 10px 20px
+}
+/* 상 10, 좌우 20, 하 30*/
+.margin-3 {
+    margin: 10px 20px 30px
+}
+/* 상우하좌, 시계방향으로 */
+.margin-4 {
+    margin: 10px 20px 30px 40px
+}
+
+/* border의 축약형 */
+.border: 3px  b??????????

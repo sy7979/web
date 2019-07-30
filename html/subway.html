@@ -12,15 +12,20 @@
     <form action="">
         <!-- form은 새 양식을 시작하게 해준다. 기본 양식에 여러가지 옵션(input tag등)을 추가할 수 있다. 눈에 보이는 테그는 아니다. 양식을 구분하기 위해 사용하는 테그-->
         <!-- 하나의 form에 샌드위치에 대한 정보들을 전부 넣으면 된다. -->
-        <label for="name">이름:</label>
-        <input id="name" type="text" name="name">
+        <div>
+            <label for="name">이름:</label>
+            <input id="name" type="text" name="name" placeholder="이름을 작성하세요">
+        </div>  
         <!-- label을 달아줄 때 id가 필요하다 -->
         <!-- label과 input은 서로 연결 되어야함! 어떻게?? label for="name", input id="name" 으로 label과 input을 연결해 준다.("name") -->
         <!-- name="name" 에서 name은 url상으로 전달되는 정보. key, value쌍을 이룬다 -->
-
-        <label for="when">날짜:</label>
-        <input id="when" type="date" name="when">
+        <!-- placeholder는 사용자에게 어떤 데이터를 넣어야하는지 설명한는 기능을 한다. (실제 값은 아니다! 값을 입력 안하면 비어있는 셀이다) -->
+        <div>
+            <label for="when">날짜:</label>
+            <input id="when" type="date" name="when">
+        </div>
         <!-- input의 type을 바꿀 수 있다. -->
+        <!-- div 로 묶으면 block이 되어서 자동으로 줄바꿈이 된다 -->
 
         <h3>1. 샌드위치 선택</h3>
         <!-- 3개 중 1개만 선택해야하므로 세 항목을 하나로 묶어줄것이다 name=""에 같은 이름을 부여하면 된다-->
@@ -33,29 +38,60 @@
 
         <h3>2. 사이즈 선택</h3>
         <!-- <input type="number" style="width:65px" placeholder="15 or 30"> -->
-        <select name="size" style="width:65px" >
+        <!-- 내코드 -->
+        <!-- <select name="size" style="width:65px" >
             <option name="size" value="15">15cm</option>
             <option name="size" value="30">30cm</option>
-        </select>
+        </select> -->
+
+        <!-- 선생님 코드 -->
+        <input name="size" type="number" value="15" min="15" max="30" step="15">
+        <!-- value는 placeholder와 다르게 실제로 데이터가 들어가있다. -->
+        <!-- min과 max로 inputd의 하한, 상한을 정할 수 있다. -->
+        <!-- step에 넣은 수 만큼씩 올라간다. -->
         <hr>
 
     
         <h3>3. 빵</h3>
-        <select name="bread">
+        <!-- 내 코드 -->
+        <!-- <select name="bread">
           <option id="honey" name="bread" value="허니오트">허니오트</option>
           <option id="flat" name="bread" value="플랫브래드"disabled>플랫브래드</option>
           <option id="hotty" name="bread" value="하티이탈리안">하티이탈리안</option>
         </select>
-        <hr>
+        <hr>-->
+
+        <!-- 선생님 코드 -->
+        <select name="bread" id="">
+            <option value="1">허니오트</option>
+            <option value="2">플랫브래드</option>
+            <option value="3">하티이탈리안</option>
+        </select>
+        <!-- select는 radio와 비슷(원하는 값 하나만 넣을 수 있다.) -->
+
 
         <h3>4. 야채/소스</h3>
+        <!-- 내 코드 -->
         <input id="tomato" type="checkbox" name="vegsouce" value="1"><label for="tomato">토마토</label>
         <input id="cucum" type="checkbox" name="vegsouce" value="2"><label for="cucum">오이</label>
         <input id="hala" type="checkbox" name="vegsouce" value="3"><label for="hala">할라피뇨</label>
         <input id="hotcilli" type="checkbox" name="vegsouce" value="4"><label for="hotcilli">핫 칠리</label>
         <input id="bbq" type="checkbox" name="vegsouce" value="5"><label for="bbq">바베큐</label>
 
+        <!-- 내 코드 -->
+        <input id="tomato" type="checkbox" name="tomato" value="True"><label for="tomato">토마토</label>
+        <input id="cucum" type="checkbox" name="cucum" value="True"><label for="cucum">오이</label>
+        <input id="hala" type="checkbox" name="hala" value="True"><label for="hala">할라피뇨</label>
+        <input id="hotcilli" type="checkbox" name="hotcilli" value="True"><label for="hotcilli">핫 칠리</label>
+        <input id="bbq" type="checkbox" name="bbq" value="True"><label for="bbq">바베큐</label>
+
+        <!-- value를 넣지 않으면 tomato=on이 뜬다.. -->
         <input type="submit">
+
+        <!-- checkbox는 중복 선택 가능 -->
+
+
+
     </form>
 
 

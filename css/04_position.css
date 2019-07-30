@@ -1,0 +1,49 @@
+div {
+    height: 100px;
+    width: 100px;
+}
+
+.blue {
+    background-color: rgb(41, 95, 243);
+    /* position: static;  기본값 defual */
+}
+
+.red {
+    background-color: rgb(240, 73, 68);
+    /* static(기본위치, 원래위치) 기준으로 왼쪽에 100만큼 여백을 주어라 */
+    /* relative는 positio이 움직여도 기본위치, 원래 위치는 바뀌지 않는다. 잔상이 남아있다고 생각! */
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+.green {
+    background-color: rgb(186, 238, 186);
+    /* absolute: (0, 0)기준으로 움직임 */
+    /* absoulte는 부모요소, 혹은 가장 가까이 있는 조상요소(static을 제외) 기준으로 이동한다 */
+    position: absolute;
+    right: 0px;
+    bottom: 0px
+}
+
+.parent {
+    background-color: darkgrey;
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.children {
+    background-color: darksalmon;
+    /* 부모에 포함되면 부모의 위치를 absolute(전체 공간으로)로 잡는다 */
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+}
+
+.yellow {
+    background-color: rgb(255, 255, 213);
+    /* 스크롤을 따라서 위치가 계속 고정된다. */
+    position: fixed;
+    right: 0px;
+    top: 0px
+}

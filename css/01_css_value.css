@@ -1,0 +1,38 @@
+/* id selector(#id)를 이용해서 style을 적용한다. */
+/* 1. picxel */
+#hello {
+    font-size: 50px;
+}
+
+
+/* 2. % */
+#welcome {
+    font-size: 200%;
+}
+/* %는 상속이 된다. */
+/* h1 은 자식, 부모(div)의 width를 상속받아서 결국 50% * 50% ==> 25% */
+div {
+    width: 50%;
+}
+/* %크기가 상속되어 h1은 최종적으로 25%가 된다 */
+h1 {
+    width: 50%;
+}
+
+
+/* 3. size: 기존 사이즈에 대한 상대적인크기, 배수로 표현*/
+/* rem 크기는 독립적 but, em은 부모 크기에 상속되어 그 영향을 받는다 */
+#lunch {
+    font-size: 0.5em;
+}
+#snack {
+    font-size: 0.5rem;
+}
+
+
+/* 4. viewport : 사용자에게 보이는 화면크기에 상대적으로 크기가 바뀐다 */
+#menu {
+    width: 20vw;
+    height: 30vh;
+    background-color: gold;
+}
