@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- bootstrap에서 html, css 가져오는것 -->
+    <!-- Check utiliy of bootstrap at the homepage-->
+</head>
+
+<body>
+    <div class="container">
+        <!-- bootstrap은 항상 조상으로 div.container을 가지고 있어야한다. 스크린 좌우에 빈공간을 준다. -->
+        <!-- 1. 공간 활용(마진 주기 등) -->
+        <h1 class="mx-auto d-inline" style="width:50%">이제부터 부트스트랩</h1>
+        <h1 class="mx-auto d-inline" style="width:50%">이제부터 부트스트랩</h1>
+        <!-- m-숫자 : 마진을 준다. 최대값 5 = 3rem -->
+        <!-- "mr-5" 오른쪽 마진-->
+        <!-- "mx-5" : x축 (좌우) 마진-->
+        <!-- py-3 : 패딩 y축으로 -->
+        <!-- mt-5 -->
+        <!-- n으로 숫자의 마이너스도 표현 가능 m-n3 -->
+
+        <!-- 2. color -->
+        <h1 class="mx-auto text-danger bg-success">테스트1</h1>
+        <h1 class="mx-auto bg-success alert-success">테스트2</h1>
+        <h1 class="d-sm-none">테스트3</h1>
+        <!-- sm size이면 display none, sm size가 아니면 class 적용이 안된다.: 반응형 
+        사이즈는 homepage Grid options에서 확인 가능하다-->
+        <a href="https://naver.com" class="btn btn-danger d-block" >네이버</a>
+        <a href="https://naver.com" class="btn btn-danger ">네이버</a>
+        <a href="https://naver.com" class="btn btn-light fixed-top">네이버</a>
+        <!-- btn-danger을 쓰려면 btn부터 불러내야한다 -->
+        <div class="my-3 border border-danger rounded circle"><h1>구글</h1></div>
+        <div class="text-center">
+            <p class="font-italic">이탤릭체</p>
+            <h1 class="font-italic">구글</h1>
+        </div>
+        <!-- h1 영역은 그대로, 글자만 가운데로 정렬한 것이다. -->
+
+    </div>
+
+
+        
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

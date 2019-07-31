@@ -1,0 +1,52 @@
+/* 모든 엘리먼트 컴퓨터에서 *는 전체를 의미한다 */
+/* * {
+    color: red
+} */
+
+/* tag selector */
+h1 {
+    color: red !important;
+    /* !important는 (적용된 항목에 대한) 최우선순위를 부여해준다., but 안쓰는게 좋다. 충돌 날 수 있으니까.. */
+}
+
+/* group */
+h1, h2 {
+    background-color: coral;
+}
+
+/* class */
+.class-selector {
+    color: blue;
+}
+
+/* id */
+#id-selector {
+    color: teal;
+}
+
+/* selector들은 우선순위가 있다
+id > class > tag 순서 
+!important가 붙어있으면 그것을 최우선순위가 된다.*/
+
+
+/* 자식 selector */
+/* ul tag:부모 <-> li tag:자식 */
+ul > li {
+    color: pink
+}
+/* 전체 li에 적용되지 않음 */
+/* ul 에 포함된 li에만 적용됨 */
+
+
+/* 형제 selector */
+/* 바로 뒤에 인접한 형제만 적용된다 */
+p + li {
+    color: skyblue
+}
+
+/* 그 뒤로 모든 형제들 까지 적용 */
+p ~ li {
+    color: greenyellow
+}
+
+/* 후손 셀렉터는?? */
