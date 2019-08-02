@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+ <h1>새로운 제품을 등록해주세요</h1>
+ <form action='/create'>
+  <div class="form-group">
+    <label for="product">제품명</label>
+    <input type="text" class="form-control" id="product" name="product">
+  </div>
+  <div class="form-group">
+    <label for="category">카테고리</label>
+    <input type="text" class="form-control" id="category" name="category">
+  </div>
+  <div class="form-group">
+    <label for="replace">대체상품</label>
+    <input type="text" class="form-control" id="replace" name="replace">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

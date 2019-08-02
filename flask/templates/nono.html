@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h1>여기는 일제 목록 입니다.</h1>
+  <!-- {# 진자 덕분에 html안에서 파이썬 문법(비슷하게) 쓸 수 있다. html은 들여쓰기가 원래 없는 문서이니까 endfor로 꼭 닫아줘야한다 #}-->
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">제품명</th>
+        <th scope="col">대체상품</th>
+        <th scope="col">카테고리</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products%}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{product[0]}}</td>
+        <td>{{product[2]}}</td>
+        <td>{{product[1]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="row">
+  {% for product in products%}
+  <div class="card border-success mx-3" style="max-width: 18rem;">
+    <div class="card-header bg-transparent border-success"><h4>{{product[0]}}</h4></div>
+    <div class="card-body text-success">
+    <p class="card-title">대체 상품을 씁시다:)</p>
+    <button type="button" class="btn btn-success">{{product[2]}}</button>
+    </div>
+    <div class="card-footer bg-transparent border-success">#{{product[1]}}</div>
+  </div>
+  {% endfor%}
+</div>
+
+{% endblock %}

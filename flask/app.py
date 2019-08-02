@@ -2,6 +2,7 @@ from flask import Flask, escape, request, render_template
 import random
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 app = Flask(__name__)
 
@@ -53,6 +54,42 @@ def search():
     print(summoner)
     return render_template('search.html', user_tier=user_tier, summoner=summoner)
 
+@app.route('/nono')
+def nono():
+    with open('data.csv', 'r', encoding='utf-8') as f:
+        reader =csv.reader(f)
+        products = list(reader)
+
+    return render_template('nono.html', products=products)
+    # render_template은 파이썬 문법을 읽어서 완전한 html 문서 형태로 만들어준다
+    # render_template가 없으면 html 화면이 우리가 원하는 형태로 나타나지 않는다(render가 없으면파이썬 문법을 못읽기 때문에)
+    # 단, render_template에서 주석을 사용하면, 주석을 건너지 않고 그냥 코드처럼 다 읽어버리기 때문에 주의해야한다.
+    # html의 주석과 진자의 주석을 동시에 달아주면 읽지 않고 넘어간다.<--{# 주석주석 #}-->이렇게!
+@app.route('/new')
+def new():
+    return render_template('new.html')
+
+@app.route('/create')
+def create():
+    product = request.args.get('product')
+    category = request.args.get('category')
+    replace = request.args.get('replace')
+
+    with open('data.csv', 'a+', encoding = 'utf-8', newline = '') as f:
+        writer = csv.writer(f)
+        # csv 파일을 읽어준다.
+        # ['해피해킹', '키보드', '한성']
+        product_info = [product, category, replace]
+        writer.writerow(product_info)
+    return render_template('create.html')
+
+@app.route('/card')
+def card():
+    with open('data.csv', 'r', encoding='utf-8') as f:
+        reader =csv.reader(f)
+        products = list(reader)
+    
+    return render_template('card.html', products=products)
 
 
 
